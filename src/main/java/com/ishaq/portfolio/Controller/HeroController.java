@@ -21,7 +21,7 @@ public class HeroController {
     public ResponseEntity<?> getHero() {
         List<Hero> list = repository.findAll();
         if (list.isEmpty()) {
-            return ResponseEntity.notFound().build();
+            return ResponseEntity.ok(new Hero()); // Return empty object instead of 404
         }
         return ResponseEntity.ok(list.get(0));
     }

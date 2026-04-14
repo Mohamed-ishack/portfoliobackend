@@ -33,7 +33,7 @@ public class FileUploadController {
             Files.write(filePath, file.getBytes());
 
             // Return the URL React will use to display the image
-            String imageUrl = "http://localhost:8080/uploads/" + fileName;
+            String imageUrl = "http://localhost:8081/uploads/" + fileName;
             return ResponseEntity.ok(Map.of("url", imageUrl));
 
         } catch (IOException e) {
