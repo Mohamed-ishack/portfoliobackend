@@ -10,7 +10,10 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/admin")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = {
+        "http://localhost:5173",
+        "https://mohamedishaq.netlify.app"
+})
 public class AdminController {
 
     private final AdminRepository adminRepository;

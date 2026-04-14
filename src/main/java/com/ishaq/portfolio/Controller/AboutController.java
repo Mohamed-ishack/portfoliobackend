@@ -10,7 +10,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/about")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = {
+        "http://localhost:5173",
+        "https://mohamedishaq.netlify.app"
+})
 public class AboutController {
     @Autowired
     public AboutRepo repository;

@@ -12,7 +12,10 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = {
+        "http://localhost:5173",
+        "https://mohamedishaq.netlify.app"
+})
 public class SkillController {
 
     private final SkillService skillService;
