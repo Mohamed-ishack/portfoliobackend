@@ -9,9 +9,9 @@ import java.io.IOException;
 import java.nio.file.*;
 import java.util.Map;
 
-@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = "*")
 public class FileUploadController {
 
     // ✅ folder where images will be saved on your Mac
